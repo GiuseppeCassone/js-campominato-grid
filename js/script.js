@@ -8,13 +8,20 @@ buttonEl.addEventListener("click",
 
     for(let i = 1; i <= 100; i++){
 
-    const newElement = document.createElement("div");
-    newElement.className = "square";
-    newElement.innerHTML = i;
-    newElement.style.fontWeight = "bold";
-    newElement.style.fontSize = "14px";
+        const newElement = document.createElement("div");
+        newElement.className = "square";
+        newElement.innerHTML = i;
+        newElement.style.fontWeight = "bold";
+        newElement.style.fontSize = "14px";
 
-    gridElement.append(newElement);
+        newElement.addEventListener("click", 
+        function(){
+
+            this.classList.toggle("active");
+            console.log(this.innerText);
+        })
+
+        gridElement.append(newElement);
 
     }
 

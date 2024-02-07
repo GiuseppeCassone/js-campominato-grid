@@ -22,3 +22,7 @@
     height: 60px;
     border: 1px solid black;
 }
+
+.square.active{
+    background-color: red;
+}
